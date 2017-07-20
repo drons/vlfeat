@@ -1,0 +1,19 @@
+platform:
+- x86
+
+image: Visual Studio 2013
+
+shallow_clone: true
+
+install:
+- echo "install"
+
+build_script:
+  - echo build_script
+  - msbuild /p:Configuration=Release /p:Platform=Win32 vlfeat.sln
+
+test_script:
+  - echo test_script
+
+deploy: off
+
